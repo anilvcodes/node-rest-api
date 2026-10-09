@@ -18,10 +18,13 @@ app.post("/ask", async (req, res) => {
     model: "gemini-3.8-flash",
     contents: message,
   });
+  console.log(response.text);
 
   res.json({
     answer: response.text,
+    
   });
+ 
 });
 
 app.listen(3000, () => {
